@@ -10,11 +10,13 @@
         gap: 20px;
         align-items: start;
       }
+      article{
+        grid-template-columns: 1/2;
+      }
       section {
-        grid-column: 1 / 2;
+        grid-column: 2 / 3;
       }
       section img {
-        grid-column: 2 / 3;
         justify-self: end;
         width: 50%; /* Adjust image width */
         height: auto; /* Keep aspect ratio */
@@ -30,7 +32,7 @@
 
 </header>
 <main>
-  <section>
+  <article>
     <u>Quint Broekaert</u>
     <p>
       Adres: Steenweg 2, Zwalm <br>
@@ -39,14 +41,15 @@
       favoriete band: imagine dragons <br>
       favoriete film: How to train your dragon
     </p>
+    <h2><a href="Hobbys.html">hobby's</a></h2>
     <ul>
-      <li><a href="gaming.html">gamen</a></li>
-      <li><a href="jogging.html">joggen</a></li>
-      <li><a href="Hobbys.html">schrijven</a></li>
+      <li>gamen</li>
+      <li>joggen</li>
+      <li>schrijven</li>
     </ul>
-  </section>
+  </article>
   <section>
-    <img src="image/picture.jpg" alt="foto Quint Broekaert">
+    <img src="images/QuintBroekaert.jpg" alt="foto Quint Broekaert">
   </section>
 </main>
 <footer>
