@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+      section {
+        grid-column: 1 / 2;
+      }
+      section img {
+        grid-column: 2 / 3;
+        justify-self: end;
+        width: 50%; /* Adjust image width */
+        height: auto; /* Keep aspect ratio */
+      }
+      ul {
+        margin-top: 20px;
+        border-bottom: 1px solid red;
+      }
+    </style>
+</head>
+<body>
+<header>
+
+</header>
+<main>
+  <section>
+    <u>Quint Broekaert</u>
+    <p>
+      Adres: Steenweg 2, Zwalm <br>
+      Telefoon: +32 497 48 21 26 <br>
+      E-mail: Quint.broekaert@Student.vives.be <br>
+      favoriete band: imagine dragons <br>
+      favoriete film: How to train your dragon
+    </p>
+    <ul>
+      <li><a href="gaming.html">gamen</a></li>
+      <li><a href="jogging.html">joggen</a></li>
+      <li><a href="Hobbys.html">schrijven</a></li>
+    </ul>
+  </section>
+  <section>
+    <img src="image/picture.jpg" alt="foto Quint Broekaert">
+  </section>
+</main>
+<footer>
+
+</footer>
+
+</body>
+</html>
