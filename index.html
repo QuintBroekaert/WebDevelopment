@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <title>index</title>
     <style>
-        main {
-            width: 100%;
-            height: 500px;
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        ol {
-            grid-column: 1 / 2;
-        }
-        table {
-            border: 1px solid black;
-            grid-column: 2 / 3;
-        }
-        hr{
-            color: red;
-        }
-        ol{
-            border-right: 1px solid red;
-            width: 75%;
-        }
-        li{
-            margin-bottom: 20px;
-        }
-        *{
-            background-color: beige;
-        }
+       main {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+ol {
+    grid-column: 1 / 2;
+}
+table {
+    border: 1px solid black;
+    grid-column: 2 / 3;
+    border-collapse: collapse; /* Ensures no double borders */
+}
+hr {
+    color: red;
+}
+ol {
+    border-right: 1px solid red;
+    width: 75%;
+}
+li {
+    margin-bottom: 20px;
+}
+* {
+    background-color: beige;
+}
+th, td {
+    border: 1px solid black; /* Fix: added 'px' to the border width */
+    padding: 8px; /* Optional: Adds space inside the cells */
+}
     </style>
 </head>
 <body>
@@ -53,7 +58,7 @@
         </li>
         
     </ol>
-    <table border="1">
+    <table>
         <thead>
         <tr>
             <th>opdrachten</th>
