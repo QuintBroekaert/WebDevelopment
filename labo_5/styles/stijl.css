@@ -1,0 +1,21 @@
+h1,h2,h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+p:first-of-type{
+    color: red;
+}
+p:nth-last-of-type(2){
+    color: green;
+}
+p:last-of-type{
+    color: blue;
+}
+h1{
+    font-size: 2ex;
+}
+h2{
+    font-size: 2em;
+}
