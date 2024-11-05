@@ -1,0 +1,13 @@
+*{
+    background-color: beige;
+}
+li{
+    display:inline-block;
+    width:150px;
+}
+li > a{
+    color: red;
+}
+hr{
+    color: sandybrown;
+}
