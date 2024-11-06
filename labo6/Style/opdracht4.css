@@ -1,0 +1,10 @@
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    background-color: silver;
+}
+h1{
+    font-variant: small-caps;
+    background-color: red;
+}
