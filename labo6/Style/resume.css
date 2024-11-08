@@ -19,7 +19,14 @@ header,footer,.education a{
 header,footer{
     color:#8D99AE;
     background-color: #2B2D42;
+    margin: 10px;
 }
 .resume{
     background-color: #8D99AE;
+}
+header{
+    margin-bottom: 15px;
+}
+footer{
+    margin-top: 15px;
 }
