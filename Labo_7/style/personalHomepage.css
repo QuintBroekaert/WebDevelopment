@@ -1,0 +1,33 @@
+
+body{
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+header{
+    height: 150px;
+    width: 100%;
+}
+main{
+    height: 600px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin: 0 auto;
+}
+th,td,table{
+    border: 1px solid black;
+}
+table{
+    height: 500px;
+}
+article img{
+    justify-content: center;
+    height: 500px;
+}
+hr{
+    color: red;
+}
+td > a{
+    text-decoration: none;
+}
