@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <link rel="stylesheet" href="style/blog">
+    <style>
+        tr,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        ol{
+            border-left: 1px solid red;
+            grid-column: 1 / 2;
+        }
+        table{
+            grid-column: 2/3;
+        }
+        main{
+            display: grid;
+            height: 500px;
+            width: 100%;
+        }
+        footer{
+            height: 50px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -59,6 +80,9 @@
 </tbody>
     </table>
 </main>
-
+<hr>
+<footer>
+    <p></p>
+</footer>
 </body>
 </html>
