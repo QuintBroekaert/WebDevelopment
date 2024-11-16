@@ -1,5 +1,5 @@
 td {
-    color: red;
+    color: darkgray;
 }
 
 body{
@@ -38,6 +38,7 @@ article img{
 article h1{
     position: relative;
     text-align: center;
+    text-decoration: underline;
 }
 hr{
     color: red;
