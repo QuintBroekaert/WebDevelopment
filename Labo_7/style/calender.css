@@ -1,24 +1,33 @@
-
-tr,td,table{
+/* General border styles */
+tr, td, table {
     border: 1px solid black;
+    border-collapse: collapse; /* Ensure no spacing between borders */
 }
-.andereMaand{
+
+/* Apply gray background for days of other month */
+table tr td.andereMaand {
     background-color: gray;
 }
 
-tr > td:nth-last-of-type(2){
-    background-color: rgb(255, 220, 220) ;
+/* Specific styling for last two columns */
+tr > td:nth-last-of-type(2) {
+    background-color: rgb(255, 220, 220);
 }
-tr > td:last-of-type{
-    background-color:  rgb(255, 220, 220);
+tr > td:last-of-type {
+    background-color: rgb(255, 220, 220);
 }
-.vrijeDag{
-    background-color:  rgb(250,120,120);
+
+/* Specific styling for vrijeDag */
+.vrijeDag {
+    background-color: rgb(250, 120, 120);
 }
-tr:first-of-type td{
-    background-color: rgb(170,170,200);
+
+/* Styling for the header row */
+tr:first-of-type td {
+    background-color: rgb(170, 170, 200);
 }
-tr:first-of-type th{
-    background-color:  rgb(35,37,70);
-    color:  rgb(200,190,240);
+
+tr:first-of-type th {
+    background-color: rgb(35, 37, 70);
+    color: rgb(200, 190, 240);
 }
