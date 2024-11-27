@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Airbus Webpagina</title>
 	<style>
+		body{
+			box-sizing: border-box;
+		}
 		header{
 			height: 200px;
 			width: 100%;
@@ -41,9 +44,19 @@
 		}
 		section{
 			margin: 10px;
+			float: left;
+		}
+		figure{
+			float: left;
 		}
 		aside{
 			float: right;
+			width: 25%;
+			border: 1px solid #999999;
+		}
+		article{
+			float: right;
+			width: 75%;
 		}
 	</style>
 </head>
@@ -76,11 +89,10 @@
 	</aside>
 
     <main> <!-- main -->
-	
+		<article> <!-- introduction -->
         <figure> <!-- logo -->
 			<img src="images/airbus_logo.jpg" alt="Het logo van airbus" >
         </figure>
-        <article> <!-- introduction -->
 			<p><b>De Airbus A380</b> is het grootste passagiersvliegtuig ter wereld. Het is
 			   een product van het Europese concern Airbus. Het widebody-vliegtuig beschikt over twee
 			   verdiepingen, waardoor het maximaal 853 passagiers kan herbergen. Bij een gemiddelde configuratie
