@@ -3,16 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Airbus Webpagina</title>
+	<style>
+		header{
+			height: 200px;
+			width: 100%;
+			background-image: url(images/bgsky3.jpg);
+			text-align: center;
+			color: darkblue;
+			font-weight: bold;
+			font-style: italic;
+		}
+		header p:first-of-type{
+			font-size: 300%;
+		}
+		header p:last-of-type{
+			font-size: 240%;
+		}
+		header img{
+			position:absolute;
+			margin-bottom: 60px;
+			margin-right: 250px;
+			float: center;
+		}
+		main article{
+			margin: 10px;
+			background-color:  #999999;
+		}
+		main article{
+			float: left;
+		}
+		.foto{
+			height: 180px;
+			width: 180px;
+			float: left;
+			padding: 10px;
+			border: 1px dotted white;
+		}
+		section{
+			margin: 10px;
+		}
+		aside{
+			float: right;
+		}
+	</style>
 </head>
 
 <body>
 	<header> <!-- top -->
 		<p>AIRBUS - A380</p>
 		<p>Het grootste passagiersvliegtuig ter wereld </p>
-		<img src="images/tekklein.png" alt="tekening van vliegtuig" />
+		<img src="images/tekklein.png" alt="tekening van vliegtuig">
 	</header>
-	
-    <article> <!-- news -->
+    <aside> <!-- news -->
 		<h3>Eerste vlucht</h3>
 		<p>Het toestel maakte zijn eerste trans-Atlantische vlucht met passagiers op 19 maart 2007 tussen
 			 Frankfurt am Main en New York.
@@ -31,15 +73,14 @@
 		<p>Een Airbus A380 van Air France raakte tijdens het taxiën naar de startbaan op John F. Kennedy
 			 International Airport met zijn vleugel de staart van een Bombardier CRJ700 van Comair.
 		</p>
-	</article>
-	
+	</aside>
+
     <main> <!-- main -->
 	
-        <div> <!-- logo -->
-			<img src="images/airbus_logo.jpg" alt="Het logo van airbus" />
-        </div>
-		
-        <div> <!-- introduction -->
+        <figure> <!-- logo -->
+			<img src="images/airbus_logo.jpg" alt="Het logo van airbus" >
+        </figure>
+        <article> <!-- introduction -->
 			<p><b>De Airbus A380</b> is het grootste passagiersvliegtuig ter wereld. Het is
 			   een product van het Europese concern Airbus. Het widebody-vliegtuig beschikt over twee
 			   verdiepingen, waardoor het maximaal 853 passagiers kan herbergen. Bij een gemiddelde configuratie
@@ -50,37 +91,37 @@
 			   toestel werd onderhouden. </span> Anno april 2011 hebben vijf luchtvaartmaatschappijen 47
 			   vliegtuigen van dit type in dienst.
 			</p>
-		</div>
+		</article>
 		
-		<div> <!-- gallery -->
+		<section> <!-- gallery -->
 			<div class="foto">
-			  <img src="images/A380Grond.JPG" alt="Foto vliegtuig op de grond" />
+			  <img src="images/A380Grond.JPG" alt="Foto vliegtuig op de grond" >
 			</div>
 			<div class="foto">
-			  <img src="images/Britischairways.JPG" alt="foto" />
+			  <img src="images/Britischairways.JPG" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/binnen3.jpg" alt="foto" />
+			  <img src="images/binnen3.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/cockpit.jpg" alt="foto" />
+			  <img src="images/cockpit.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/indelucht.jpg" alt="foto" />
+			  <img src="images/indelucht.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/pasagiers.jpg" alt="foto" />
+			  <img src="images/pasagiers.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/binnen1.jpg" alt="foto" />
+			  <img src="images/binnen1.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/indelucht2.jpg" alt="foto" />
+			  <img src="images/indelucht2.jpg" alt="foto" >
 			</div>
 			<div class="foto">
-			  <img src="images/abramovich.jpg" alt="foto"/>
-			</div> 
+			  <img src="images/abramovich.jpg" alt="foto">
 		</div>
+	</section>
 	</main>
 	
     <div> <!-- bottom -->
@@ -110,10 +151,8 @@
 			   <li> A380 - 800 </li>
 			</ul>
 	</section>
-	
 	<footer> <!-- copyright -->
 		<p>&lt; &copy; Airbus A380 &gt;</p>
 	</footer>
-	
 </body>
 </html>
