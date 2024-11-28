@@ -4,72 +4,136 @@
 	<meta charset="UTF-8">
 	<title>Airbus Webpagina</title>
 	<style>
-		body{
-			box-sizing: border-box;
-		}
-		header{
-			height: 200px;
-			width: 100%;
-			background-image: url(images/bgsky3.jpg);
-			text-align: center;
-			color: darkblue;
-			font-weight: bold;
-			font-style: italic;
-			position: relative;
-		}
-		header p:first-of-type{
-			font-size: 300%;
-		}
-		header p:last-of-type{
-			font-size: 240%;
-			z-index: 1;
-		}
-		header img{
-			position:absolute;
-			margin-top: -140px;
-			z-index: 1;
-		}
-		main article{
-			margin: 10px;
-			background-color:  #999999;
-		}
-		main article{
-			float: left;
-		}
-		.foto{
-			height: 180px;
-			width: 180px;
-			float: left;
-			padding: 10px;
-			border: 1px dotted white;
-		}
-		section{
-			margin: 10px;
-			float: left;
-		}
-		section:first-of-type{
-			width: 70%;
-		}
-		figure{
-			float: left;
-		}
-		aside{
-			float: right;
-			width: 25%;
-			border: 1px solid #999999;
-		}
-		article{
-			float: right;
-			width: 75%;
-		}
-		h3{
-			background-color: blue;
-			color: white;
-			text-align: center;
-		}
-		footer{
-			width: 100%;
-		}
+		body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+    background-image: url(images/bgsky3.jpg);
+    text-align: center;
+    color: darkblue;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+header p:first-of-type {
+    font-size: 3em;
+    margin: 0;
+    padding-top: 20px;
+}
+
+header p:last-of-type {
+    font-size: 2.4em;
+    margin: 0;
+}
+
+header img {
+    position: absolute;
+    top: 30px;
+    right: 20%;
+    width: 300px; /* Adjust the size of the image */
+}
+
+aside {
+    float: right;
+    width: 25%;
+    border: 1px solid #999999;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+aside h3 {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+main {
+    float: left;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+article {
+    
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+article figure {
+    float: left;
+}
+
+article p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #000;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+	width: 100%;
+}
+
+.foto {
+    height: 180px;
+    width: 180px;
+    border: 1px dotted white;
+    background-color: #ddd;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+div > section {
+    float: left;
+    width: 50%;
+	display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section:first-of-type{
+	background-color:  #666666;
+}
+section:last-of-type{
+	background-color:  #666666;
+}
+section{
+	float: left;
+}
 	</style>
 </head>
 
