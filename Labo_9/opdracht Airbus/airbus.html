@@ -15,18 +15,19 @@
 			color: darkblue;
 			font-weight: bold;
 			font-style: italic;
+			position: relative;
 		}
 		header p:first-of-type{
 			font-size: 300%;
 		}
 		header p:last-of-type{
 			font-size: 240%;
+			z-index: 1;
 		}
 		header img{
 			position:absolute;
-			margin-bottom: 60px;
-			margin-right: 250px;
-			float: center;
+			margin-top: -140px;
+			z-index: 1;
 		}
 		main article{
 			margin: 10px;
@@ -46,6 +47,9 @@
 			margin: 10px;
 			float: left;
 		}
+		section:first-of-type{
+			width: 70%;
+		}
 		figure{
 			float: left;
 		}
@@ -57,6 +61,14 @@
 		article{
 			float: right;
 			width: 75%;
+		}
+		h3{
+			background-color: blue;
+			color: white;
+			text-align: center;
+		}
+		footer{
+			width: 100%;
 		}
 	</style>
 </head>
@@ -138,7 +150,7 @@
 	
     <div> <!-- bottom -->
 	
-		<div> <!-- block -->
+		<section> <!-- block -->
 			<ul>
 			  <li> Manchester </li>
 			  <li> Toulouse 
@@ -149,7 +161,7 @@
 				  </ul> </li>
 			   <li> Frankfurt am Main </li>
 			</ul>
-		</div>
+		</section>
 		
 		<section> <!-- block -->
 			<ul>
