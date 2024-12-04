@@ -1,6 +1,4 @@
 
-
-
 body {
 	font: 1.2em/1.2 Helvetica, aria, sans-serif;
 	margin: 0 3%;
@@ -34,6 +32,8 @@ figcaption {
 }
 
 
-@media  {
+@media screen {
+	
+}{
 	
 }
