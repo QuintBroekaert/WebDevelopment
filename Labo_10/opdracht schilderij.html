@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #a {
+            border: solid black;
+            border-width: 0 7.5px 15px 0px;
+            min-height: 165px;
+            background: rgb(255, 255, 255);
+        }
+
+        #b {
+            border: solid black;
+            border-width: 15px 7.5px 7.5px 0;
+            min-height: 190px;
+            background: rgb(255, 255, 255);
+        }
+
+        #c {
+            border: solid black;
+            border-width: 0 0 7.5px 7.5px;
+            min-height: 355px;
+            background: rgb(220, 40, 26);
+        }
+
+        #d {
+            border: solid black;
+            border-width: 7.5px 7.5px 0 0;
+            min-height: 150px;
+            background: rgb(0, 93, 159);
+        }
+
+        #e {
+            border: solid black;
+            border-width: 7.5px 7.5px 0 7.5px;
+            min-height: 150px;
+            background: rgb(255, 255, 255);
+        }
+
+        #f {
+            border: solid black;
+            border-width: 7.5px 0 12.5px 7.5px;
+            min-height: 75px;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        #g {
+            border: solid black;
+            border-width: 12.5px 0 0 7.5px;
+            min-height: 75px;
+            background-color: rgb(242, 224, 122);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- First Row -->
+        <div class="row">
+            <div id="b" class="col-2">
+                <div id="a" class=""></div>
+            </div>
+            <div id="c" class="col-10"></div>
+        </div>
+        <!-- Second Row -->
+        <div class="row">
+            <div id="d" class="col-2"></div>
+            <div id="e" class="col-9"></div>
+            <div id="g" class="col-1">
+                <div id="f"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
