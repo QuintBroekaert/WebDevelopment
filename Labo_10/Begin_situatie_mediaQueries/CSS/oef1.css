@@ -32,8 +32,8 @@ figcaption {
 }
 
 
-@media screen {
-	
-}{
-	
+@media screen and (max-width: 480px){
+.row:last-of-type{
+display: none;
+}
 }
