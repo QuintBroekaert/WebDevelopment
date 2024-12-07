@@ -1,31 +1,27 @@
 /* Basic Styling for Divs */
-#A, #B, #C, #D, #E, #F {
+#a, #b, #c, #d, #e, #f {
     padding: 20px;
     text-align: center;
     font-size: 1.5rem;
     background-color: #f0f0f0;
     margin: 5px 0;
 }
+#b,#d,#f{
+    background-color: gray;
+}
 
 /* Media Queries */
-
-/* Tablet View (768px to 991px) */
 @media (max-width: 991px) {
-    /* Only first two columns visible in each row */
     #c, #d {
         display: none;
     }
 }
 
-/* Mobile View (max-width: 767px) */
 @media (max-width: 767px) {
-    /* Make the first item in each row full-width */
     #a, #e {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    /* Hide other columns */
     #b, #c, #d, #f {
         display: none;
     }

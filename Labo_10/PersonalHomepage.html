@@ -5,22 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal homepage</title>
     <style>
+        header{
+width: 100%;
+height: 50px;
+        }
+        hr{
+            color: red;
+        }
         th,td,table{
             border: 1px solid black;
+            margin: 0 auto;
         }
         table{
             border-collapse: collapse;
+            display: inline-block;
+            font-size: large;
+            margin-left: 5%;
+            margin-right: 5%;
+            height: 220px;
         }
+        td,th{
+            height: 40px;
+        }
+        figure{
+            width: 75%;
+            height: 350px;
+            display: inline-block;
+        }
+        figure img{
+            width: 100%;
+            height: 350px;
+        }
+        figcaption{
+            text-align: center;
+        }
+        
+        @media screen and (min-width: 768px) {
+    figure {
+        width: 30%;
+        margin-left: 5%;
+    }
+
+    article {
+        width: 40%;
+        margin: 2%;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    figure {
+        width: 35%;
+        margin-left: 5%;
+        display: inline-block;
+    }
+
+    article {
+        width: 90%;
+        margin: 5%;
+    }
+}
+
     </style>
 </head>
 <body>
     <header>
         <h1>Personal homepage</h1>
     </header>
+    <hr>
     <main>
         <table>
             <tr>
                 <th colspan="2">Quint Broekaert</th>
+                <td></td>
             </tr>
             <tr>
                 <th>Tel:</th>
@@ -39,11 +96,27 @@
                 <td>Believer van imagine dragons</td>
             </tr>
         </table>
+        
         <figure>
-            <img src="" alt="">
+            
+            <img src="images/Quint Broekaert.jpg" alt="Foto Quint Broekaert">
+            <figcaption><b>Foto Quint Broekaert</b></figcaption>
         </figure>
-        <caption><b>Foto Quint Broekaert</b></caption>
     </main>
+    <article>
+        <h1>opleiding: Informatica beheer</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure neque atque debitis voluptatibus, autem sit animi repellendus corporis placeat nobis eveniet dignissimos tempore voluptatum similique provident impedit enim, odit et!
+        Incidunt, dolor hic quaerat dolorem quidem minima aliquam ullam praesentium ipsa eius dolores. Nisi, hic laborum iusto nobis cumque voluptatum itaque eveniet, culpa veritatis mollitia, unde at voluptate ab libero!
+        Sint possimus ullam, consequatur adipisci error aperiam neque voluptas officiis exercitationem asperiores, repellendus soluta? Unde accusantium doloremque beatae eaque laudantium quo? Facere sapiente quam nulla! Dolore aperiam beatae laboriosam rem!
+        </p>
+    </article>
+    <article>
+        <h1>ervaringen</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quas sed mollitia, ea accusamus, totam rerum nemo libero quaerat repellat repudiandae at ad maiores. Aliquam maiores quisquam expedita voluptatibus iure.
+        Veniam libero nihil quidem eum consectetur excepturi adipisci minima ipsa explicabo praesentium voluptates magnam quas doloremque nostrum blanditiis, fuga nobis! Maiores repellendus similique numquam rem possimus consequuntur eligendi beatae sed?
+        Enim voluptate minus vitae fugiat hic quaerat quia optio voluptatem, eum deleniti dolore. Esse labore asperiores cupiditate sed molestias dolore, commodi, omnis error iure doloremque voluptatem at ratione explicabo laborum!</p>
+    </article>
+    <hr>
     <footer>
         <p>Personal homepage | Quint Broekaert | ga terug naar <a href="../index.html">index</a></p>
     </footer>
