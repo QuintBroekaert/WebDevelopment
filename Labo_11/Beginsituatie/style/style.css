@@ -1,5 +1,12 @@
 /* items */
 
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
 section div {
     color: white;
     font-size: 20px;
