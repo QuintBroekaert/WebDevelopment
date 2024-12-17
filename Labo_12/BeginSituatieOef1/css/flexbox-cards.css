@@ -65,7 +65,8 @@ a {
 .container {
 /* flex-eigenschappen */
     display:flex;
-    flex-direction: column;
+    justify-content: space-around;
+    
 }
 
 .card {
