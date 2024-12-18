@@ -65,7 +65,7 @@ a {
 .container {
 /* flex-eigenschappen */
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     
 }
 
