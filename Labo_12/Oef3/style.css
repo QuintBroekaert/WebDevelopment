@@ -15,32 +15,47 @@ body {
   margin: 0;
 
   /* zorg dat section-block in het midden komt */
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
 
 /* profilecard krijgt afgeronde hoeken */
 .card {
+  display: flex;
+  flex-direction: column;
   background: url('images/bg-pattern-card.svg') no-repeat, white;
   border-radius: .5em;
   min-block-size: 20rem;
   inline-size: 100%;
   max-inline-size: 350px;
+  border-radius: 5px;
+  
 
  /* tip: gebruik flex-direction"  */
-
-
+}
+.stats{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
 }
 
 .card .profile-picture-wrapper {
   order: -1;
   margin-block-start: 4.5em;
+  justify-self: center;
+  align-self: center;
 }
 
 .card header {
   text-align: center;
   border-block-end: 1px solid hsl(0, 0%, 59%);
+  justify-content: center;
+  align-self: center;
+  width: 100%;
 }
 
 .card header div {
@@ -62,7 +77,9 @@ body {
   inline-size: 100%;
   padding: 2em;
 /* zorg dat de statistische gegevens horizontaal komen */
-
+display: flex;
+flex-direction: row;
+align-self: space-around;
 
 }
 
