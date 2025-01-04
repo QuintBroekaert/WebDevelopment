@@ -42,3 +42,12 @@ dt{
     font-weight: bold;
     margin-top: 8px;
 }
+article{
+    width: 50%;
+    float: right;
+    height: 350px;
+}
+article img{
+    width: 100%;
+    height: 350px;
+}
