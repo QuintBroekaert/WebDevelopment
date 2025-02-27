@@ -7,7 +7,7 @@
 
 <body>
 <form action="">
-	<label for="FirstName">First name*: <input type="text" name="FirstName" required placeholder="Your first name"></label><br>
+	<label for="FirstName">First name*: <input type="text" name="FirstName" required placeholder="Your first name" autofocus></label><br>
 	<label for="LastName">Second name*: <input type="text" name="LastName" required placeholder="Your last name"></label>
 	<p>Wich sport do you train?</p>
 	<label for="Running">Running <input type="checkbox" name="Running"></label> <br>
@@ -26,11 +26,11 @@
 	</select></label><br>
 	<input type="file" name="file" id="file"><br>
 	<label for="mail">E-mail: <input type="email" placeholder="Enter your E-mail adress"></label><br>
-	<label for="Site">Favorite Site: <input type="text" placeholder="Enter the Url of your Favorite site"></label><br>
+	<label for="Site">Favorite Site: <input type="url" placeholder="Enter the Url of your Favorite site"></label><br>
 	<label for="Num">Favorite number between 1-10: <input type="number" max="10" min="1" name="Num" id="Num"></label><br>
 	<label for="LargeNum">Favorite number between 11 - 1000: <input type="range" max="1000" min="11" name="LargeNum"></label><br>
 	<label for="BirthDate">When were you born? <input type="date"></label> <br>
-	<label for="code">Belgium zip-code reg number*: <input type="text" name="" id="code" required placeholder="9999" min="1000"> </label><br>
+	<label for="code">Belgium zip-code reg number*: <input type="text" name="" id="code" required placeholder="9999" min="1000" maxlength="4"> </label><br>
 	<label for="search">search for something: <input type="search" name="search"></label> <br>
 	<label for="color">Enter your Favorite color: <input type="color" name="color"></label><br>
 <input type="submit" name="submit" id="submit">
