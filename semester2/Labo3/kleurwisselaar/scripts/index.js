@@ -1,11 +1,15 @@
-const setup = () =>{
-	let buttons = document.getElementsByClassName("button");
-	color = "color";
-}
-window.addEventListener("load",setup);
+const colorSwitch = (index) => {
+    let buttons = document.getElementsByClassName("botton");
+    let color = "color";
+    if (buttons[index]) {
+        buttons[index].classList.toggle(color);
+    }
+};
 
-const colorSwitch1 = () =>{
-	let buttons = document.getElementsByClassName("button");
-	buttons[btnnumber].classList.toggle(color);
-}
-buttons[1].addEventListener("click", colorSwitch1);
+window.addEventListener("load", () => {
+    let buttons = document.getElementsByClassName("botton");
+    
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", () => colorSwitch(i));
+    }
+});
