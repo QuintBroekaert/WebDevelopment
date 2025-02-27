@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>Oefening</title>
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+
+<body>
+<form action="">
+	<label for="FirstName">First name*: <input type="text" name="FirstName" required placeholder="Your first name"></label><br>
+	<label for="LastName">Second name*: <input type="text" name="LastName" required placeholder="Your last name"></label>
+	<p>Wich sport do you train?</p>
+	<label for="Running">Running <input type="checkbox" name="Running"></label> <br>
+	<label for="Swimming">Swimming <input type="checkbox" name="Swimming"></label> <br>
+	<label for="Rowing">Rowing <input type="checkbox" name="Rowing"></label> <br>
+	<p>What is your Gender?</p>
+	<label for="Gender"><input type="radio" name="Gender"> Male</label> <br>
+	<label for="Gender"><input type="radio" name="Gender"> Female</label><br>
+	<label for="Movie">Favorite movie: <input type="text" name="Movie"></label> <br>
+	<label for="quote">Favorite quote: <input type="text" name="quote" placeholder="Write your Favorite quote"></label> <br>
+	<label for="password">password*: <input type="password" required name="password"></label> <br>
+	<label for="">Favorite food: <select name="" id="food">
+		<option value="Hamburger">Hamburger</option>
+		<option value="Pizza">Pizza</option>
+		<option value="Fries">Fries</option>
+	</select></label><br>
+	<input type="file" name="file" id="file"><br>
+	<label for="mail">E-mail: <input type="email" placeholder="Enter your E-mail adress"></label><br>
+	<label for="Site">Favorite Site: <input type="text" placeholder="Enter the Url of your Favorite site"></label><br>
+	<label for="Num">Favorite number between 1-10: <input type="number" max="10" min="1" name="Num" id="Num"></label><br>
+	<label for="LargeNum">Favorite number between 11 - 1000: <input type="range" max="1000" min="11" name="LargeNum"></label><br>
+	<label for="BirthDate">When were you born? <input type="date"></label> <br>
+	<label for="code">Belgium zip-code reg number*: <input type="text" name="" id="code" required placeholder="9999" min="1000"> </label><br>
+	<label for="search">search for something: <input type="search" name="search"></label> <br>
+	<label for="color">Enter your Favorite color: <input type="color" name="color"></label><br>
+<input type="submit" name="submit" id="submit">
+</form>
+	<script src="scripts/index.js"></script>
+</body>
+</html> 
