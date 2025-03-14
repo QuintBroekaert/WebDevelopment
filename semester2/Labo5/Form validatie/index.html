@@ -6,7 +6,11 @@
 </head>
 
 <body>
-
+<form method="get">
+	<label for="voornaam">voornaam:<input type="text" id="voornaam" pattern="{0-30}"></label>
+	<label for="famillienaam">famillienaam: <input type="text" id="famillienaam" maxlength="50" required></label>
+	<label for="Geboortedatum">Geboortedatum: <input type="date" format="jjj-mm-dd"></label>
+</form>
 	<script src="scripts/index.js"></script>
 </body>
 </html> 

@@ -1,0 +1,14 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+form{
+    border: 1px solid black;
+    grid-column: 2/3;
+}
+#roker{
+    margin-left: 50px;
+}
+span{
+    margin-right: 25px;
+}
