@@ -1,6 +1,12 @@
-span{
-    color: red;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
-.onzichtbaar{
-    display: none;
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.invalid {
+    border: 2px solid red;
 }
