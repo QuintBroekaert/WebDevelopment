@@ -18,7 +18,10 @@ if(voornaam.length > 30){
 		WarnnigFamillienaam.classList.toggle("onzichtbaar")
 	}
 	let Geboortedatum = document.getElementById("Geboortedatum").value;
-	if(Geboortedatum ==)
+	const regex = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
+	if(!regex.test(Geboortedatum)){
+		
+	}
 
 }
 window.addEventListener("load",setup)
