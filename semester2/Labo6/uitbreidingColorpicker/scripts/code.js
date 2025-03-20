@@ -1,5 +1,7 @@
 const initialize = () => {
 	let sliders = document.getElementsByClassName("slider");
+	let button = document.getElementById("Save")
+	button.addEventListener("click", save);
 	for (let i = 0; i < sliders.length; i++) {
 		// we moeten zowel op het input als het change event reageren,
 		// zie http://stackoverflow.com/questions/18544890
@@ -19,5 +21,12 @@ const update = () => {
 	let swatch=document.getElementById("swatch");
 	swatch.style.backgroundColor="rgb("+red+","+green+","+blue+")";
 };
+const save = () =>{
+	let saved = document.createElement("div")
+	let swatch = document.getElementById("swatch");
+	saved.style.backgroundColor = swatch.backgroundColor;
+	let section =document.getElementById("savedColors")
+	section.appendChild(saved);
+}
 
 window.addEventListener("load", initialize);
