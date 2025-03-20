@@ -20,8 +20,12 @@
 }
 section{
 	width:100%;
-	height:500px;
+	height:200px;
 	border: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 10px;
 }
 
 
@@ -42,5 +46,12 @@ section{
 	border:solid 5px lightgrey;
 	border-radius:10px;
 	padding:10px;
+}
+.save{
+	border: 1px solid black;
+	width: ;
+}
+.save button{
+	float: right;
 }
 
