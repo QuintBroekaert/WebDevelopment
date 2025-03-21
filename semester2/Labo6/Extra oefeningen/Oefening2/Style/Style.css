@@ -1,3 +1,10 @@
 .listitem{
     
 }
+section{
+    width: 150px;
+    height: 250px;
+}
+section img{
+    width: 100%;
+}
