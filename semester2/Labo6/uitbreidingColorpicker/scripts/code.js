@@ -29,7 +29,7 @@ const save = () => {
 
     btn.textContent = "X";
     saved.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-    let section = document.getElementById("savedColors");
+    let section = document.getElementById("saves");
     saved.classList.add("save");
     
     saved.appendChild(btn);
