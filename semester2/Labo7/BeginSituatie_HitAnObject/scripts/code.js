@@ -7,7 +7,7 @@ const startGame = () => {
         MOVE_DELAY: 3000, // aantal milliseconden voor een nieuwe afbeelding verschijnt
         score: 0, // aantal hits
         timeoutId: 0 // id van de timeout timer, zodat we die kunnen annuleren
-    }
+    };
     let timer = setInterval(setTarget,1000);
 }
 const setTarget = () => {
@@ -15,23 +15,25 @@ const setTarget = () => {
     let bomb = document.createElement("img");
     bomb.style.width = (global.IMAGE_SIZE + "px");
     bomb.style.height = (global.IMAGE_SIZE + "px");
-    bomb.src = "images/0.png";
+    let index = 0
+    bomb.src = global.IMAGE_PATH_PREFIX + index + global.IMAGE_PATH_SUFFIX;
     bomb.alt = "target";
-    bomb.addEventListener("click", click);
+    bomb.addEventListener("click", click(index));
     playField.appendChild(bomb);
+    
 
 }
-const click = () =>{
+const click = (index) =>{
+    index++;
     window.alert("You clicked");
-}
-const endGame = () => {
-    window.alert("you are dead");
     let x = Math.round(Math.random()*600);
     let y = Math.round(Math.random()*800);
     bomb.style.marginLeft = x;
     bomb.style.marginBottom = y;
 }
-
+const endGame = () => {
+    
+}
 window.addEventListener("load", startGame);
 
 
