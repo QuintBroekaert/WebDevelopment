@@ -3,6 +3,8 @@ const startGame = () =>{
         AANTAL_HORIZONTAAL:4,
 AANTAL_VERTICAAL:3,
 AANTAL_KAARTEN:6,
+punten:0,
+beurten:0,
 previouslySelected:null
     }
     let table = document.getElementById("table");
@@ -13,14 +15,24 @@ previouslySelected:null
     for(let i = 0 ; i < global.AANTAL_KAARTEN; i++){
         let card = document.createElement("img")
         card.alt = "this is a card";
-        card.src = ("images/card" + i + ".png");
-        card.addEventListener("click",)
+        card.src = "images/background.png";
+        let Copy = card
+        card.addEventListener("click",select(i));
+        Copy.addEventListener("click", select(i));
         table.append(card);
+        table.append(Copy);
     }
-}
-const select = () =>{
-    let currentCard = this;
-    if(previouslySelected != null && currentCard === previouslySelected){
 
-    }
+}
+const select = (cardNum) =>{
+    if(global.previouslySelected == null){
+        this.src = "kaart" + cardNum + ".png"
+        global.previouslySelected = this;
+     }else if(global.previouslySelected === this && previouslySelected.src !="images/background.png"){
+        global.punten++;
+     }else{
+        this.src ="images/background.png";
+        previouslySelected.src = "images/background.png";
+        beurten++;
+     }
 }
