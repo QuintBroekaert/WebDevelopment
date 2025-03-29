@@ -26,6 +26,7 @@ const createObjects = () => {
 
     for (let index = 0; index < global.IMAGE_COUNT; index++) {
         let object = document.createElement("img");
+        object.alt = "this is a target";
         object.src = global.IMAGE_PATH_PREFIX + index + global.IMAGE_PATH_SUFFIX;
         object.style.width = global.IMAGE_SIZE + "px";
         object.style.height = global.IMAGE_SIZE + "px";
@@ -52,7 +53,8 @@ const wissel = (object) => {
     object.style.top = getRandomY() + "px";
 };
 const updateScore = () =>{
-    
+let txtScore = document.getElementById("score");
+txtScore.innerHTML = ("score: " + global.score);
 }
 
 const checkState = (event) => {
@@ -65,6 +67,7 @@ const checkState = (event) => {
     } else {
         wissel(clickedImage);
         global.score++;
+        updateScore();
     }
 };
 
