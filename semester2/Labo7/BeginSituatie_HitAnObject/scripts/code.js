@@ -8,31 +8,33 @@ const startGame = () => {
         score: 0, // aantal hits
         timeoutId: 0 // id van de timeout timer, zodat we die kunnen annuleren
     };
+    createobjects();
 }
-    window.addEventListener("load",startGame);
-    const createObjects = () =>{
+    const createobjects = () =>{
         let field = document.getElementById("playField");
+        for(let index=0;index>global.IMAGE_COUNT;index++){
         let object = document.createElement("img");
         object.src = global.IMAGE_PATH_PREFIX + index + global.IMAGE_PATH_SUFFIX;
+        object.style.width = (global.IMAGE_SIZE + "px");
+        object.style.height = (global.IMAGE_SIZE + "px");
         object.addEventListener("click", checkState)
         field.append(object);
-        global.timeoutId = setTimeout(wissel, global.MOVE_DELAY)
+        global.timeoutId = setTimeout(wissel(index), global.MOVE_DELAY)
+        }
     }
-    const wissel = () =>{
+    const wissel = (index) =>{
         let field = document.getElementById("playField");
         let objects = document.childNodes;
-        if(objects.length > 0){
-        for(let i = 0; i < objects.length; i++){
+        
             let x = Math.random*800;
             x = Math.ceil(x);
             let y = Math.random*600;
             y = Math.ceil(y);
-            let temp = objects[i];
-            temp.style.marginLeft = (x + "px"); 
+            let temp = objects[index];
+            temp.style.marginLeft = (x + "px");
             temp.style.marginBottom = (y + "px");
         }
-        }
-    }
+        
     const checkState = () =>{
         if(this.src == "images/0.png"){
 // add bomb sequence
@@ -41,3 +43,4 @@ const startGame = () => {
             global.score++;
         }
     }
+    window.addEventListener("load",startGame)
