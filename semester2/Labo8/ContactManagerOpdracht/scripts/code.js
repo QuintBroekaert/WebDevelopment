@@ -1,7 +1,6 @@
 let personen = [];
 
-// Event listener (btnBewaar click)
-// Bewaar de wijzigingen die in de user interface werden aangebracht
+//functie bewerkknop
 const bewaarBewerktePersoon = (event) => {
     valideer();
     let select = document.getElementById("lstPersonen");
