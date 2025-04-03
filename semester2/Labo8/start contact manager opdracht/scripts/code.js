@@ -5,7 +5,8 @@ let personen = [];
 const bewaarBewerktePersoon = (event) => {
     valideer();
     let select = document.getElementById("lstPersonen");
-    let options = select.childNodes;
+    let options = select.children
+    console.log(options);
     let selected = options[select.selectedIndex];
     console.log("selectedvalue = " + selected.value)
     persoon = personen[selected.value];
