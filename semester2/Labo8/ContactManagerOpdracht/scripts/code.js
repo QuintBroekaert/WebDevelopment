@@ -1,8 +1,17 @@
 let personen = [];
-
+const validatiecheck = () =>{
+    valideer();
+    let errors = document.getElementsByClassName("errorMessage");
+    for(let i = 0 ; i < errors.length;i++){
+        if(errors[i].textContent != ""){
+            return false;
+        }
+    }
+    return true;
+}
 //functie bewerkknop
 const bewaarBewerktePersoon = (event) => {
-    valideer();
+    if(validatiecheck()){
     let select = document.getElementById("lstPersonen");
     let options = select.children
     console.log(options);
@@ -28,9 +37,10 @@ personen[selected.value] = persoon;
 selected = persoon.naam + " " +persoon.achternaam;
 clear();
 }
+}
 // Event listener (btnNieuw click)
 const bewerkNieuwePersoon = () => {
-    valideer();
+    if(validatiecheck()){
     let select = document.getElementById("lstPersonen");
     
     // Haal waarden uit de inputvelden op
@@ -60,7 +70,8 @@ const bewerkNieuwePersoon = () => {
 
     // Maak de invoervelden leeg voor de volgende invoer
     clear();
-};
+}
+}
 const clear = () =>{
     document.getElementById('txtVoornaam').value = "";
     document.getElementById('txtFamilienaam').value = "";
