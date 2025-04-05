@@ -14,9 +14,7 @@ const bewaarBewerktePersoon = (event) => {
     if(validatiecheck()){
     let select = document.getElementById("lstPersonen");
     let options = select.children
-    console.log(options);
     let selected = options[select.selectedIndex];
-    console.log("selectedvalue = " + selected.value)
     persoon = personen[selected.value];
     persoon.naam = document.getElementById('txtVoornaam').value;
     persoon.achternaam = document.getElementById('txtFamilienaam').value;
