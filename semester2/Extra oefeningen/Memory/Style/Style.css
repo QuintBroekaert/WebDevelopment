@@ -1,0 +1,10 @@
+#Field{
+    margin: 0 auto;
+    height: 920px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1fr,4);
+    grid-template-rows: repeat(1fr,3);
+    gap: 10px;
+    border: 1px solid black;
+}
