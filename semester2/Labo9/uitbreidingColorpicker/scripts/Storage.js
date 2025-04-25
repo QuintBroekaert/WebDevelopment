@@ -30,7 +30,7 @@ const restoreColors = () =>{
     let saved = document.createElement("div");
     let btn = document.createElement("button");
     btn.textContent = "X";
-    saved.style.backgroundColor = "rgb(" + colors.rood + "," + colors.groen + "," + colors.blauw + ")";
+    saved.style.backgroundColor = "rgb(" + colors.rood + "," + colors.groen + "," + colors.blauw + ")"; 
     let section = document.getElementById("saves");
     saved.classList.add("save");
     }
