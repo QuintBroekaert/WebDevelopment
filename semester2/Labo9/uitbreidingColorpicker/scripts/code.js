@@ -6,6 +6,9 @@ const initialize = () => {
     for (let i = 0; i < sliders.length; i++) {
         sliders[i].addEventListener("change", update);
         sliders[i].addEventListener("input", update);
+        if(localStorage.getItem("count") == null){
+            localStorage.setItem("count","0");
+        }
         restoreSliderData();
     }
     update();
@@ -28,13 +31,11 @@ const save = () => {
     let green = document.getElementById("sldGreen").value;
     let blue = document.getElementById("sldBlue").value;
     let saved = document.createElement("div");
-
     let btn = document.createElement("button");
     btn.textContent = "X";
     saved.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     let section = document.getElementById("saves");
     saved.classList.add("save");
-    global.savedColors
     
     saved.appendChild(btn);
     section.appendChild(saved);

@@ -3,15 +3,6 @@ const storeSliderData = () =>{
     localStorage.setItem("rood",document.getElementById('sldRed').value);
     localStorage.setItem("groen",document.getElementById('sldGreen').value);
     localStorage.setItem("blauw",document.getElementById('sldBlue').value);
-if(localStorage.getItem('kleuren')){
-    let temp = localStorage.getItem('kleuren');
-
-}
-else{
-    let temp = [];
-    temp.push(JSON.stringify(kleurwaarden));
-    localStorage.setItem("Kleurwaarden", temp.toString());
-}
 }
 
 const restoreSliderData = () =>{
@@ -26,13 +17,24 @@ let kleuren;
 kleuren.groen = groen;
 kleuren.blauw = blauw;
 kleuren = JSON.stringify(kleuren);
-localStorage.setItem(global.savedcolors.toString(),kleuren);
-global.savedcolors++;
+localStorage.setItem(localStorage.getItem("count"),kleuren);
+let count = parseInt(localStorage.count);
+count++;
+localStorage.setItem("count",count.toString);
 }
 
 const restoreColors = () =>{
-for(let i = 0 ; i < global.savedColors ; i++){
-let kleuren = JSON.parse(localStorage.getItem(i.toString()));
-
-}
+    let count = parseInt(localStorage.count);
+    for (let index = 0; index <= count; index++) {
+        let colors = JSON.parse(localStorage.getItem(index.toString))
+    let saved = document.createElement("div");
+    let btn = document.createElement("button");
+    btn.textContent = "X";
+    saved.style.backgroundColor = "rgb(" + colors.rood + "," + colors.groen + "," + colors.blauw + ")";
+    let section = document.getElementById("saves");
+    saved.classList.add("save");
+    }
+    
+    saved.appendChild(btn);
+    section.appendChild(saved);
 }
