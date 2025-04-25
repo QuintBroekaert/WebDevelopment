@@ -1,4 +1,3 @@
-let global;
 const storeSliderData = () =>{
     let kleurwaarden;
     localStorage.setItem("rood",document.getElementById('sldRed').value);
@@ -27,9 +26,13 @@ let kleuren;
 kleuren.groen = groen;
 kleuren.blauw = blauw;
 kleuren = JSON.stringify(kleuren);
+localStorage.setItem(global.savedcolors.toString(),kleuren);
 global.savedcolors++;
 }
 
 const restoreColors = () =>{
+for(let i = 0 ; i < global.savedColors ; i++){
+let kleuren = JSON.parse(localStorage.getItem(i.toString()));
 
+}
 }

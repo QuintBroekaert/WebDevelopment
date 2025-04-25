@@ -1,3 +1,4 @@
+let global
 const initialize = () => {
     let sliders = document.getElementsByClassName("slider");
     let button = document.getElementById("Save");
@@ -27,12 +28,13 @@ const save = () => {
     let green = document.getElementById("sldGreen").value;
     let blue = document.getElementById("sldBlue").value;
     let saved = document.createElement("div");
-    let btn = document.createElement("button");
 
+    let btn = document.createElement("button");
     btn.textContent = "X";
     saved.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     let section = document.getElementById("saves");
     saved.classList.add("save");
+    global.savedColors
     
     saved.appendChild(btn);
     section.appendChild(saved);
