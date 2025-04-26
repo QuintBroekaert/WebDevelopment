@@ -19,14 +19,21 @@ const storeColors = () => {
     const restoreColors = () => {
         const section = document.getElementById("saves");
         section.innerHTML = localStorage.getItem("colors");
-    
-        const buttons = document.getElementsByClassName("btn");
+        let saved = document.getElementsByClassName("save");
+        let buttons = document.getElementsByClassName("btn");
     
         for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener("click", function (event) {
+            buttons[i].addEventListener("click", remove = (event) => {
                 const parentDiv = event.target.parentElement;
                 parentDiv.remove();
                 storeColors();
             });
+            saved[i].addEventListener("click", select = (event) =>{
+                let temp = event.target;
+                let display = document.getElementById("swatch");
+                display.style.backgroundColor = temp.style.backgroundColor;
+            }
+            
+            );
         }
     };

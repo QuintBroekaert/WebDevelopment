@@ -1,4 +1,3 @@
-let global
 const initialize = () => {
     let sliders = document.getElementsByClassName("slider");
     let button = document.getElementById("Save");
@@ -29,11 +28,16 @@ const save = () => {
     let green = document.getElementById("sldGreen").value;
     let blue = document.getElementById("sldBlue").value;
     let saved = document.createElement("div");
+    saved.classList.add("save");
+    saved.addEventListener("click",select)
     let btn = document.createElement("button");
     btn.textContent = "X";
     saved.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     let section = document.getElementById("saves");
     saved.classList.add("save");
+    saved.red = red;
+    saved.green = green;
+    saved.blue = blue;
     btn.classList.add("btn"); 
     saved.appendChild(btn);
     section.appendChild(saved);
@@ -42,5 +46,9 @@ const save = () => {
     });
     storeColors(); 
 };
-
+select = (event) => {
+    let temp = event.target;
+    let display = document.getElementById("swatch");
+    display.style.backgroundColor = temp.style.backgroundColor;
+}
 window.addEventListener("load", initialize);
