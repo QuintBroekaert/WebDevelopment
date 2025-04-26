@@ -6,10 +6,8 @@ const initialize = () => {
     for (let i = 0; i < sliders.length; i++) {
         sliders[i].addEventListener("change", update);
         sliders[i].addEventListener("input", update);
-        if(localStorage.getItem("count") == null){
-            localStorage.setItem("count","0");
-        }
         restoreSliderData();
+        restoreColors();
     }
     update();
 };
@@ -19,8 +17,8 @@ const update = () => {
     let green = document.getElementById("sldGreen").value;
     let blue = document.getElementById("sldBlue").value;
     document.getElementById("lblRed").innerHTML = red;
-    document.getElementById("lblGreen").innerHTML = green;
-    document.getElementById("lblBlue").innerHTML = blue;
+    document.getElementById("lblGreen").innerText = green;
+    document.getElementById("lblBlue").innerText = blue;
     let swatch = document.getElementById("swatch");
     swatch.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     storeSliderData();
@@ -36,14 +34,13 @@ const save = () => {
     saved.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     let section = document.getElementById("saves");
     saved.classList.add("save");
-    
+    btn.classList.add("btn"); 
     saved.appendChild(btn);
     section.appendChild(saved);
-
-    
     btn.addEventListener("click", remove = () => {
         saved.remove();
     });
+    storeColors(); 
 };
 
 window.addEventListener("load", initialize);
