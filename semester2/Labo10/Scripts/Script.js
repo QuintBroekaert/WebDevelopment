@@ -4,6 +4,7 @@ const initialize = () =>{
     if(localStorage.getItem("cards") == null){
         localStorage.setItem("cards", JSON.stringify([]))
     }
+    loadHistory();
     btn.addEventListener("click", parseCommmand)
 }
 const createSearchString = (array) =>{
@@ -71,6 +72,19 @@ const parseCommmand = () =>{
             console.log(command);
             window.alert("Invalid commmand");
             break;
+    }
+}
+const loadHistory = () => {
+    let array = localStorage.getItem("cards");
+    for (let index = 0; index < array.length; index++) {
+        let element = array[index];
+        if(index <= 3){
+
+        }
+        else{
+
+        }
+        
     }
 }
 window.addEventListener("load", initialize);
