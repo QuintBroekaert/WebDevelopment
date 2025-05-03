@@ -28,7 +28,7 @@ const parseCommmand = () =>{
                 text: txt.value,
                 url: ("https://www.google.com/search?q=" + createSearchString(commandWords))
             };
-            let temp = JSON.parse(localStorage.getItem("cards")) || [];
+            let temp = JSON.parse(localStorage.getItem("cards"));
             temp.push(g);
             localStorage.setItem("cards", JSON.stringify(g));
             window.open(g.url); 
@@ -84,7 +84,7 @@ window.open(url);
 const loadHistory = () => {
     
     let cards = JSON.parse(localStorage.getItem("cards"));
-    let columns = document.getElementsByName("column");
+    let columns = document.getElementsByClassName("card")
     for (let index = 0; index < cards.length; index++) {
         let btn = document.createElement("button");
     let text = document.createElement("span");
