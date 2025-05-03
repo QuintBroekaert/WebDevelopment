@@ -10,7 +10,7 @@ const initialize = () =>{
 const createSearchString = (array) =>{
     let search = "";
     for (let i = 1; i < array.length; i++){
-        search = array[i] + " "
+        search = array[i] + " ";
     }
     search = search.trim();
     return search;
@@ -20,53 +20,55 @@ const parseCommmand = () =>{
     let command = txt.value;
     let commandWords = command.split(' ');
     switch (commandWords[0]){
+        
+        // parse google
         case "/g":
             let g = {
-                title: "x",
+                title: "g",
                 text: txt.value,
                 url: ("https://www.google.com/search?q=" + createSearchString(commandWords))
             };
-            let temp = localStorage.getItem("cards")
-            temp = JSON.parse(temp);
+            let temp = JSON.parse(localStorage.getItem("cards"))
             temp.push(g);
-            localStorage.setItem("cards", JSON.stringify(temp));
-            window.location = g.url
+            localStorage.setItem("cards", JSON.stringify(g));
+            window.open(g.url); 
             break;
+            //parse intagram
                 case "/i":
                     let i = {
                         title: "i",
                         text: txt.value,
-                        url: ("https://www.instagram.com/explore/tags/viveshwbkortrijk/" + createSearchString(commandWords))
+                        url: ("https://www.instagram.com/explore/tags/" + createSearchString(commandWords))
                     };
-                    let instagram = localStorage.getItem("cards")
-                    instagram = JSON.parse(instagram);
-                    instagram.push(g);
-                    localStorage.setItem("cards", JSON.stringify(instagram));
-                    window.location = i.url
+                    let history = JSON.parse(localStorage.getItem("cards"));
+                    history.push(i);
+                    localStorage.setItem("cards", JSON.stringify(history));
+                    window.open(i.url)
                     break;
-                    case "/x":
-                        let x = {
-                            title: "x",
-                        text: txt.value,
-                        url: ("https://x.com/hashtag/" + createSearchString(commandWords))
-    };
-    let twitter = localStorage.getItem("cards")
-                        twitter = JSON.parse(cards);
-                        twitter.push(temp);
-                        localStorage.setItem("cards", JSON.stringify(twitter));
-                        window.location = temp.url
                         break;
-                        case "/y":
+                        
+                        case "/x":
+                            let x = {
+                                title: "x",
+                                text: txt.value,
+                                url: ("https://www.youtube.com/results?search_query=" + createSearchString(commandWords))
+                            }
+                            let x_history = JSON.parse(localStorage.getItem("cards"));
+                            x_history.push(x);
+                            localStorage.setItem("cards", JSON.stringify(x_history));
+                            window.open(x.url);
+                            break;
+
+                            case "/y":
                             let y = {
                                 title: "y",
                                 text: txt.value,
                                 url: ("https://www.youtube.com/results?search_query=" + createSearchString(commandWords))
                             }
-                            cards = localStorage.getItem("cards")
-            cards = JSON.parse(cards);
-                            cards.push(y);
-                            localStorage.setItem("cards", JSON.stringify(cards));
-                            window.location = y.url
+                            let y_History = JSON.parse(localStorage.getItem("cards"));
+                            y_History.push(y);
+                            localStorage.setItem("cards", JSON.stringify(y_History));
+                            window.open(y.url);
                             break;
         default:
             console.log(command);
@@ -74,14 +76,14 @@ const parseCommmand = () =>{
             break;
     }
      txt.value = "";
+     loadHistory()
 }
 const remove = (event) =>{
 let current = event.target
 current.remove();
 }
 const loadHistory = () => {
-    let array = localStorage.getItem("cards");
-    let coloms = document.getElementsByClassName("col-3");
+    let array = JSON.parse(localStorage.getItem("cards"))
     let btn = document.createElement("button");
     let text = document.createElement("span");
     text.style.color = "white";
@@ -92,19 +94,17 @@ const loadHistory = () => {
     title.style.color = "white";
     let cards = localStorage.getItem("cards");
     cards = JSON.parse(cards);
-    for (let index = 0; index < array.length; index++) {
+    let columns = document.getElementsByName("column");
+    for (let index = 0; index < cards.length; index++) {
         let card = document.createElement("div");
-    coloms[index].innerHTML = "";
-    card.classList.add("cards");
     title.textContent = array[index].title;
     text.textContent = array[index].text;
-    btn.textContent = "Go!"
-    btn.style.color = "White";
     card.append(title);
     card.append(text);
         switch(array[index].title){
             case "y":
                 card.style.backgroundColor = "red";
+                btn.style.backgroundColor = "black";
                 break;
                 case "i":
             card.style.backgroundColor = "purple"
@@ -116,12 +116,15 @@ const loadHistory = () => {
                 card.style.backgroundColor = "blue"
                 break;
                 case "f":
-
+            card.style.backgroundColor = "cyan"
                 break;
                 
         }
         btn.addEventListener("click",remove);
-        coloms[index].append(card)
+        card.append(title);
+        card.append(text)
+        card.append(btn);
+        columns[index].append(card);
     }
 }
 window.addEventListener("load", initialize);
