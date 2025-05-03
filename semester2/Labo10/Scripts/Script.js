@@ -28,7 +28,7 @@ const parseCommmand = () =>{
                 text: txt.value,
                 url: ("https://www.google.com/search?q=" + createSearchString(commandWords))
             };
-            let temp = JSON.parse(localStorage.getItem("cards"))
+            let temp = JSON.parse(localStorage.getItem("cards")) || [];
             temp.push(g);
             localStorage.setItem("cards", JSON.stringify(g));
             window.open(g.url); 
@@ -76,32 +76,28 @@ const parseCommmand = () =>{
             break;
     }
      txt.value = "";
-     loadHistory()
+     loadHistory();
 }
-const remove = (event) =>{
-let current = event.target
-current.remove();
+const go = (url) =>{
+window.open(url);
 }
 const loadHistory = () => {
-    let array = JSON.parse(localStorage.getItem("cards"))
-    let btn = document.createElement("button");
+    
+    let cards = JSON.parse(localStorage.getItem("cards"));
+    let columns = document.getElementsByName("column");
+    for (let index = 0; index < cards.length; index++) {
+        let btn = document.createElement("button");
     let text = document.createElement("span");
     text.style.color = "white";
     btn.textContent = "GO!";
     btn.style.color = "white";
-    btn.backgroundColor = "black";
+    btn.style.backgroundColor = "black";
     let title = document.createElement("h2");
     title.style.color = "white";
-    let cards = localStorage.getItem("cards");
-    cards = JSON.parse(cards);
-    let columns = document.getElementsByName("column");
-    for (let index = 0; index < cards.length; index++) {
         let card = document.createElement("div");
-    title.textContent = array[index].title;
-    text.textContent = array[index].text;
-    card.append(title);
-    card.append(text);
-        switch(array[index].title){
+    title.textContent = cards[index].title;
+    text.textContent = cards[index].text;
+        switch(cards[index].title){
             case "y":
                 card.style.backgroundColor = "red";
                 btn.style.backgroundColor = "black";
@@ -120,7 +116,7 @@ const loadHistory = () => {
                 break;
                 
         }
-        btn.addEventListener("click",remove);
+        btn.addEventListener("click",go(cards[index].url));
         card.append(title);
         card.append(text)
         card.append(btn);
