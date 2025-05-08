@@ -1,0 +1,17 @@
+#container{
+    width: 30%;
+    height: 500px;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: 100px 1fr;
+}
+#h2{
+    grid-row: 0,1;
+    grid-column: 0,3;
+}
+#sliders{
+    grid-column: 0,1;
+    grid-row: 1,2;
+    width: 100%;
+    height: 400px;
+}
