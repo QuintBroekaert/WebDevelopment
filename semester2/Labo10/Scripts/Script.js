@@ -69,7 +69,7 @@ const parseCommmand = () =>{
                             y_History.push(y);
                             localStorage.setItem("cards", JSON.stringify(y_History));
                             window.open(y.url);
-                            break;
+                            break;nt
         default:
             console.log(command);
             window.alert("Invalid commmand");
