@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
+        <h2>colorpicker</h2>
         <div id="container">
-            <h2>colorpicker</h2>
             <div id="sliders">
-                <input type="range" id="sldRed">
-            <input type="range" id="sldGreen">
-            <input type="range" id="sldBlue">
+                <label for="sldRed" id="lblRed"></label><input type="range" id="sldRed" min="0" max="255"><span>255</span>
+                <label for="sldGreen" id="lblGreen"></label><input type="range" id="sldGreen" min="0" max="255"><span>255</span>
+                <label for="sldBlue" id="lblBlue"></label><input type="range" id="sldBlue" min="0" max="255"><span>255</span>
             <button id="save">save</button>
             </div>
             <div id="colors"></div>
